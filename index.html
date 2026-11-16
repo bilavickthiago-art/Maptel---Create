@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAPTEL CREATE</title>
+<style>
+/* VARIABLES CSS */
+:root{
+--color-fondo:#0f172a;
+--color-header:#111827;
+--color-card:#1e293b;
+--color-hover:#334155;
+--color-principal:#38bdf8;
+--texto:#ffffff;
+--gris:#cbd5e1;
+--radio:18px;
+--espacio:30px;
+--fuente:Arial, sans-serif;
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:var(--fuente);
+scroll-behavior:smooth;
+}
+body{
+background:var(--color-fondo);
+color:var(--texto);
+}
+/* HEADER */
+header{
+background:var(--color-header);
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+header h1{
+color:var(--color-principal);
+}
+nav{
+display:flex;
+gap:20px;
+}
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+nav a:hover{
+color:var(--color-principal);
+}
+/* HERO */
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+background-size:cover;
+background-position:center;
+}
+.hero-content{
+max-width:850px;
+
+}
+.hero h2{
+font-size:58px;
+margin-bottom:20px;
+}
+.hero p{
+color:#d1d5db;
+font-size:20px;
+line-height:1.7;
+margin-bottom:35px;
+}
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:var(--color-principal);
+color:black;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+.btn:hover{
+background:white;
+}
+/* SERVICIOS */
+.services{
+padding:90px 50px;
+text-align:center;
+}
+.services h2{
+color:var(--color-principal);
+font-size:42px;
+margin-bottom:50px;
+}
+.cards{
+display:flex;
+
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+.card{
+width:320px;
+background:var(--color-card);
+padding:35px;
+border-radius:var(--radio);
+transition:.3s;
+}
+.card:hover{
+background:var(--color-hover);
+transform:translateY(-8px);
+}
+.card h3{
+color:var(--color-principal);
+margin-bottom:15px;
+}
+.card p{
+color:var(--gris);
+margin-bottom:20px;
+line-height:1.6;
+}
+.card a{
+background:var(--color-principal);
+color:black;
+text-decoration:none;
+padding:10px 18px;
+border-radius:8px;
+font-weight:bold;
+}
+/* EMPRESA */
+.about{
+background:var(--color-header);
+padding:90px 50px;
+
+text-align:center;
+}
+.about h2{
+color:var(--color-principal);
+font-size:42px;
+margin-bottom:25px;
+}
+.about p{
+max-width:900px;
+margin:auto;
+color:#d1d5db;
+line-height:1.8;
+margin-bottom:40px;
+}
+/* VIDEO ANUNCIO */
+.about-video{
+    max-width:850px;
+    margin:0 auto 45px;
+}
+.about-video h3{
+    color:var(--color-principal);
+    font-size:28px;
+    margin-bottom:20px;
+}
+.about-video video{
+    width:100%;
+    max-height:480px;
+    border-radius:var(--radio);
+    background:#000;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+/* EQUIPO */
+.team{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+.member{
+width:270px;
+background:var(--color-card);
+padding:25px;
+border-radius:var(--radio);
+}
+.member:hover{
+background:var(--color-hover);
+}
+.member h3{
+color:var(--color-principal);
+margin-bottom:10px;
+}
+.member p{
+
+color:var(--gris);
+}
+/* GALERÍA */
+.gallery{
+padding:90px 50px;
+text-align:center;
+}
+.gallery h2{
+color:var(--color-principal);
+font-size:42px;
+margin-bottom:15px;
+}
+.gallery p{
+color:var(--gris);
+margin-bottom:40px;
+}
+.gallery-grid{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+.item{
+width:300px;
+background:var(--color-card);
+border-radius:18px;
+overflow:hidden;
+transition:.3s;
+}
+.item:hover{
+transform:translateY(-8px);
+}
+.item img{
+width:100%;
+height:200px;
+
+object-fit:cover;
+}
+.item h3{
+padding:18px;
+color:var(--color-principal);
+}
+/* NOSOTROS */
+.nosotros{
+background:var(--color-header);
+padding:80px 50px;
+text-align:center;
+}
+.nosotros h2{
+color:var(--color-principal);
+font-size:40px;
+margin-bottom:20px;
+}
+.nosotros p{
+max-width:850px;
+margin:auto;
+color:#d1d5db;
+line-height:1.8;
+}
+/* CONTACTO */
+.contact{
+padding:90px 50px;
+text-align:center;
+}
+.contact h2{
+color:var(--color-principal);
+font-size:42px;
+margin-bottom:15px;
+}
+.contact p{
+
+color:var(--gris);
+margin-bottom:35px;
+}
+.contact-form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+.contact-form input,
+.contact-form textarea{
+padding:15px;
+border:none;
+border-radius:10px;
+background:var(--color-card);
+color:white;
+font-size:16px;
+}
+.contact-form textarea{
+resize:vertical;
+min-height:150px;
+}
+.contact-form button{
+border:none;
+cursor:pointer;
+}
+/* FOOTER */
+footer{
+background:var(--color-header);
+text-align:center;
+padding:25px;
+color:#9ca3af;
+}
+/* RESPONSIVE */
+
+@media(max-width:768px){
+header{
+flex-direction:column;
+gap:15px;
+}
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+.hero h2{
+font-size:40px;
+}
+}
+</style>
+</head>
+<body>
+<!-- HEADER -->
+<header>
+<h1>MAPTEL CREATE</h1>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#empresa">Empresa</a>
+<a href="#galeria">Galería</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+<main>
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+<div class="hero-content">
+<h2>Construimos tu presencia digital</h2>
+<p>
+No solo diseñamos páginas web: creamos experiencias digitales modernas,
+rápidas y preparadas para hacer crecer tu negocio en internet.
+</p>
+<a href="#empresa" class="btn">Conocer más</a>
+</div>
+</section>
+<!-- SERVICIOS -->
+<section class="services" id="servicios">
+<h2>Nuestros Servicios</h2>
+<div class="cards">
+<article class="card">
+<h3>Diseño Web</h3>
+<p>Creamos páginas modernas, adaptables y optimizadas para cualquier
+dispositivo.</p>
+<a href="#contacto">Solicitar</a>
+</article>
+<article class="card">
+<h3>Marketing Digital</h3>
+<p>Estrategias para aumentar la visibilidad de tu empresa y conseguir
+clientes.</p>
+<a href="#contacto">Solicitar</a>
+</article>
+<article class="card">
+<h3>SEO Profesional</h3>
+
+<p>Posicionamos tu sitio en Google para generar más visitas y
+oportunidades.</p>
+<a href="#contacto">Solicitar</a>
+</article>
+</div>
+</section>
+<!-- EMPRESA -->
+<section class="about" id="empresa">
+<h2>¿Qué es MAPTEL CREATE?</h2>
+<p>
+Somos una empresa especializada en desarrollo web, identidad digital y
+marketing online. Nuestro objetivo es ofrecer soluciones innovadoras
+para
+emprendedores, comercios y empresas.
+</p>
+
+<!-- VIDEO ANUNCIO -->
+<div class="about-video">
+    <h3>ANUNCIO</h3>
+    <video controls preload="metadata">
+        <source src="ANUNCIO.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+    </video>
+</div>
+
+<div class="team">
+<article class="member">
+<h3>Diseño</h3>
+<p>Interfaces atractivas y profesionales enfocadas en la experiencia
+del usuario.</p>
+</article>
+<article class="member">
+<h3>Desarrollo</h3>
+<p>Programación de sitios rápidos, seguros y totalmente
+responsivos.</p>
+</article>
+<article class="member">
+<h3>Innovación</h3>
+<p>Utilizamos herramientas modernas para crear proyectos preparados
+para el futuro.</p>
+</article>
+</div>
+
+</section>
+<!-- GALERÍA -->
+<section class="gallery" id="galeria">
+    <h2>Galería de Proyectos</h2>
+    <p>Algunos trabajos y soluciones digitales desarrolladas por MAPTEL CREATE.</p>
+    
+    <div class="gallery-grid">
+    
+    <article class="item">
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" alt="Diseño de tienda online">
+    <h3>E-commerce</h3>
+    </article>
+    
+    <article class="item">
+    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2" alt="Página web empresarial">
+    <h3>Empresa</h3>
+    </article>
+    
+    <article class="item">
+    <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb" alt="Diseño de portfolio">
+    <h3>Portfolio Digital</h3>
+    </article>
+    
+    <article class="item">
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Landing page y análisis digital">
+    <h3>Landing Page</h3>
+    </article>
+    
+    <article class="item">
+    <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07" alt="Marketing digital">
+    <h3>Marketing Digital</h3>
+    </article>
+    
+    <article class="item">
+    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72" alt="Negocio local">
+    <h3>Negocio Local</h3>
+    </article>
+    
+    </div>
+    </section>
+<!-- NOSOTROS -->
+<section class="nosotros" id="nosotros">
+
+    <h2>Nosotros</h2>
+    
+    <p>
+    En MAPTEL CREATE somos un equipo especializado en soluciones digitales
+    orientadas al crecimiento de empresas, emprendimientos y negocios locales.
+    Nuestro objetivo es transformar ideas en experiencias digitales modernas,
+    funcionales y atractivas.
+    </p>
+    
+    <p>
+    Trabajamos combinando diseño, programación y estrategias de marketing para
+    crear páginas web adaptadas a las necesidades de cada cliente. Nos enfocamos
+    en desarrollar sitios rápidos, seguros y fáciles de utilizar, logrando que
+    cada marca pueda destacarse dentro del mundo digital.
+    </p>
+    
+    <p>
+    Creemos que una buena presencia online es fundamental para conectar con
+    nuevos clientes y mejorar la comunicación de una empresa. Por eso utilizamos
+    herramientas actuales y un enfoque creativo para ofrecer proyectos
+    innovadores preparados para el futuro.
+    </p>
+    
+    </section>
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+<h2>Contacto</h2>
+<p>Completá el formulario y nos comunicaremos con vos.</p>
+<form class="contact-form">
+<input type="text" placeholder="Nombre y Apellido" required>
+<input type="email" placeholder="Correo Electrónico" required>
+<input type="tel" placeholder="Número de Teléfono" required>
+<input type="text" placeholder="Nombre de la Empresa" required>
+<textarea placeholder="Escribí tu consulta..." required></textarea>
+<button class="btn" type="submit">Enviar Consulta</button>
+</form>
+
+</section>
+</main>
+<!-- FOOTER -->
+<footer>
+<p>MAPTEL CREATE</p>
+<p>Email: contacto@maptelcreate.com</p>
+<p>Teléfono: +54 11 4567-8901</p>
+<p>© 2026 Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
